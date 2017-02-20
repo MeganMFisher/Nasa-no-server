@@ -1,0 +1,39 @@
+<section class="dinoSection">
+    <div class='dinos'>
+        <div class="trex"></div>
+        <div class='stego'></div>
+        <div class='tri'></div>
+        <div class='bronto'></div>
+        <div class='ptero'></div>
+        <div class='dinoVol'></div>
+        <div id="sky"></div>
+        <div id="sun_yellow"></div>
+        <div id="sun_red"></div>
+        <div id="clouds"></div>
+        <div id="ground"></div>
+        <div id="night"></div>
+        <div id="stars"></div>        
+        <div id="sstar"></div>
+        <div id="moon"></div>
+        
+        <script type="text/javascript">
+            $(function() {
+                $('#sun_yellow').animate({'top':'96%','opacity':0.4}, 12000,function(){
+                    $('#stars').animate({'opacity':1}, 5000,function(){
+                        $('#moon').animate({'top':'20%','opacity':1}, 5000, function(){
+                            $('#sstar').animate({'opacity':1}, 300);
+                            $('#sstar').animate({
+                                'backgroundPosition':'0px 0px','top':'15%', 'opacity':0
+                            }, 500,function(){
+                            });
+                        });
+                    });
+                });
+                $('#sun_red').animate({'top':'96%','opacity':0.8}, 12000);
+                $('#sky').animate({'backgroundColor':'#4F0030'}, 18000);
+                $('#clouds').animate({'backgroundPosition':'1000px 0px','opacity':0}, 30000);
+                $('#night').animate({'opacity':0.8}, 20000);
+            });
+        </script>
+    </div>
+ </section>
