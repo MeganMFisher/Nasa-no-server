@@ -11,27 +11,6 @@ $small-font: 'Playfair Display';
     background-size: cover; 
 }
 
-// .heading {
-//     color: white;
-//     font-size: 36px;
-//     animation-duration: 10s;
-//     animation-name: slidein;
-//     animation-iteration-count: infinite;
-//     animation-direction: alternate;
-// }
-// @keyframes slidein {
-//   from {
-//     margin-left: 100%;
-//     width: 300%; 
-//   }
-
-//   to {
-//     margin-left: 0%;
-//     width: 100%;
-//   }
-// }
-
-
 
 .greyBarOne {
     background: url("../images/footerpic.jpg") no-repeat center;
@@ -77,6 +56,25 @@ $small-font: 'Playfair Display';
    
 }
 
+.lavaPic {
+    z-index: 12;
+    width: 500px;
+    height: 500px;
+    background-image: url("../images/lava_cooling.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 150px;
+    margin-left: 910px;
+    opacity: 0;
+    transition: 2s;
+
+}
+
+.lavaPic:hover {
+    opacity: 1;
+}
+
 //---------------------------
 .greyBarHome {
     background: #212121;
@@ -84,42 +82,108 @@ $small-font: 'Playfair Display';
     height: 150px;
 }
 
-.greyTriangle {
+.midSection {
+    background-image: url('../images/blueTriangle.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 40vh;
-    border-style: solid;
-    border-width: 800px 0 0 1300px;
-    border-color: transparent transparent transparent darkgrey;
-    // opacity: .7;
-   position: absolute;
+    height: 760px;
+    display: flex;
+    
 }
+
+.blue {
+    width: 50%;
+    height: 100%;
+    // background-color: blue;
+}
+
+.blue img {
+    width: 500px;
+    height: 500px;
+    margin-top: 150px;
+    margin-left: 190px;
+    opacity: 0;
+    transition: 2s;
+
+}
+
+.blue img:hover {
+    opacity: 1;
+}
+
+.red {
+    width: 50%;
+    height: 100%;
+   
+}
+
+.red p {
+    width: 600px;
+    height: 600px;
+    font-size: 40px;
+    text-align: justify;
+    line-height: 120%;
+    color: #3a3a3a;
+    font-family: $small-font;
+    margin-top: 160px;
+    margin-left: 40px;
+}
+
+
+// .greyTriangle {
+//     width: 100%;
+//     height: 40vh;
+//     border-style: solid;
+//     border-width: 800px 0 0 1300px;
+//     border-color: transparent transparent transparent darkgrey;
+//     // opacity: .7;
+//    position: absolute;
+// }
 
 
 .fireballText {
     color: #3a3a3a;
-    width: 600px;
+    width: 100%;
     height: 600px;
     font-size: 40px;
     text-align: justify;
     margin-top: 150px;
     line-height: 120%;
-    z-index: 2;
-    // margin-left: 100px;
+    z-index: 22;
+    margin-left: 100px;
     position: absolute;
     font-family: $small-font;
+    display: flex;
   
 }
 
-.blueTriangle {
-    width: 100%;
-    height: 40vh;
-    border-style: solid;
-    border-width: 0 0 800px 800px;
-    border-color: transparent transparent lightblue transparent;
-    z-index: 4;
-    // position: relative; 
+// .blueTriangle {
+//     width: 100%;
+//     height: 40vh;
+//     border-style: solid;
+//     border-width: 0 0 800px 800px;
+//     border-color: transparent transparent lightblue transparent;
+//     z-index: 0;
+//     // position: relative; 
    
-}
+
+
+// .firePic {
+    // z-index: 20;
+    // width: 500px;
+    // height: 500px;
+    // background-image: url("../images/fireball2.jpg");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 500px 500px;
+    // margin-top: 150px;
+    // margin-left: 140px;
+   
+// }
+
+//-----------------------------
 
 .parallax {
     background-image: url("../images/volcano17.jpg");

@@ -51,11 +51,11 @@ table {
 .trex {
   background: url("../images/t-rex.png");
   height: 120px;
-  width: 120px;
+  width: 130px;
   z-index: 4;
   position: absolute;
   right: 21%;
-  top: 80%; }
+  bottom: 35px; }
 
 .stego {
   background: url("../images/stegosaurus.png");
@@ -64,7 +64,7 @@ table {
   z-index: 4;
   position: absolute;
   left: 33%;
-  top: 80%;
+  bottom: 35px;
   transform: scale(-1, 1); }
 
 .tri {
@@ -74,7 +74,7 @@ table {
   z-index: 4;
   position: absolute;
   right: 0%;
-  top: 85%; }
+  bottom: 20px; }
 
 .bronto {
   background: url("../images/brontosaurus.png");
@@ -82,8 +82,8 @@ table {
   width: 120px;
   z-index: 4;
   position: absolute;
-  left: 8%;
-  top: 82%;
+  left: 130px;
+  bottom: 2px;
   background-size: cover; }
 
 .ptero {
@@ -93,7 +93,7 @@ table {
   position: absolute;
   z-index: 4;
   left: -2%;
-  top: 20%;
+  top: 150px;
   background-size: cover;
   transform: rotate(50deg); }
 
@@ -103,7 +103,7 @@ table {
   width: 180px;
   z-index: 4;
   right: 7%;
-  top: 72%;
+  bottom: 25px;
   position: absolute;
   background-size: cover; }
 
@@ -148,7 +148,7 @@ table {
   right: 0px;
   bottom: 0px;
   width: 100%;
-  height: 232px;
+  height: 632px;
   background: transparent url(../images/ground.png) repeat-x bottom center;
   z-index: 3; }
 
@@ -225,7 +225,6 @@ h1 span {
   box-sizing: border-box; }
 
 .slideshowFireball {
-  max-width: 1000px;
   position: relative;
   margin: auto; }
 
@@ -298,14 +297,14 @@ h1 span {
 
 .keyBox {
   width: 80%;
-  height: 50vh;
+  height: 400px;
   background: white;
   color: #717171;
   font-size: 36px;
   text-align: center;
   margin-left: 150px;
   font-family: "Playfair Display";
-  margin-bottom: 40px; }
+  margin-bottom: 60px; }
 
 .top {
   text-align: justify; }
@@ -376,38 +375,79 @@ h1 span {
   border-color: lightblue transparent transparent transparent;
   z-index: 0; }
 
+.lavaPic {
+  z-index: 12;
+  width: 500px;
+  height: 500px;
+  background-image: url("../images/lava_cooling.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 150px;
+  margin-left: 910px;
+  opacity: 0;
+  transition: 2s; }
+
+.lavaPic:hover {
+  opacity: 1; }
+
 .greyBarHome {
   background: #212121;
   width: 100%;
   height: 150px; }
 
-.greyTriangle {
+.midSection {
+  background-image: url("../images/blueTriangle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 40vh;
-  border-style: solid;
-  border-width: 800px 0 0 1300px;
-  border-color: transparent transparent transparent darkgrey;
-  position: absolute; }
+  height: 760px;
+  display: flex; }
+
+.blue {
+  width: 50%;
+  height: 100%; }
+
+.blue img {
+  width: 500px;
+  height: 500px;
+  margin-top: 150px;
+  margin-left: 190px;
+  opacity: 0;
+  transition: 2s; }
+
+.blue img:hover {
+  opacity: 1; }
+
+.red {
+  width: 50%;
+  height: 100%; }
+
+.red p {
+  width: 600px;
+  height: 600px;
+  font-size: 40px;
+  text-align: justify;
+  line-height: 120%;
+  color: #3a3a3a;
+  font-family: "Playfair Display";
+  margin-top: 160px;
+  margin-left: 40px; }
 
 .fireballText {
   color: #3a3a3a;
-  width: 600px;
+  width: 100%;
   height: 600px;
   font-size: 40px;
   text-align: justify;
   margin-top: 150px;
   line-height: 120%;
-  z-index: 2;
+  z-index: 22;
+  margin-left: 100px;
   position: absolute;
-  font-family: "Playfair Display"; }
-
-.blueTriangle {
-  width: 100%;
-  height: 40vh;
-  border-style: solid;
-  border-width: 0 0 800px 800px;
-  border-color: transparent transparent lightblue transparent;
-  z-index: 4; }
+  font-family: "Playfair Display";
+  display: flex; }
 
 .parallax {
   background-image: url("../images/volcano17.jpg");
