@@ -336,7 +336,7 @@ h1 span {
 
 .earth {
   width: 100%;
-  height: 95vh;
+  height: 900px;
   background: url("../images/earth.jpg") no-repeat center;
   background-size: cover; }
 
@@ -451,7 +451,7 @@ h1 span {
 
 .parallax {
   background-image: url("../images/volcano17.jpg");
-  height: 85vh;
+  height: 800px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -490,7 +490,7 @@ h1 span {
   border: 19px solid lightblue; }
 
 .descriptionBox {
-  height: 90vh;
+  height: 650px;
   width: 35%;
   background-color: darkgrey;
   text-align: center;
@@ -504,7 +504,7 @@ h1 span {
   font-weight: bold; }
 
 .apod {
-  height: 90vh;
+  height: 650px;
   width: 65%; }
 
 .headerBar {
@@ -540,11 +540,13 @@ li:hover {
   /*border-bottom: 2px solid #8f2005;*/
   transform: scale(1.5); }
 
+.backgroundImage {
+  background: url("../images/footerpic.jpg") no-repeat center;
+  background-size: cover; }
+
 .footerBar {
   width: 100%;
   height: 300px;
-  background: url("../images/footerpic.jpg") no-repeat center;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -559,6 +561,13 @@ button {
 button:hover {
   background: linear-gradient(#c72a00, #f4e894);
   transform: scale(1.3); }
+
+.myName {
+  color: #717171;
+  font-family: "Muli";
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-left: 1510px; }
 
 .slideshow {
   width: 100%;

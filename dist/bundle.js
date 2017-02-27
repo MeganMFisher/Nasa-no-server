@@ -192,7 +192,7 @@ angular.module('app').service('mainSvc', function ($http) {
   // this.test1 = 's';
 
 
-  var fireballUrl = 'https://api.nasa.gov/SSD-CNEOS/Fireball?api_key=0mGbNN5DOFCTs63uL0cI8MQPechnF8x4FR8NY5EO';
+  var fireballUrl = 'https://api.nasa.gov/SSD-CNEOS/Fireball?api_key=' + apiKey;
 
   this.getFireballData = function () {
     return $http({
@@ -204,7 +204,7 @@ angular.module('app').service('mainSvc', function ($http) {
     });
   };
 
-  var ApodUrl = 'https://api.nasa.gov/planetary/apod?api_key=0mGbNN5DOFCTs63uL0cI8MQPechnF8x4FR8NY5EO';
+  var ApodUrl = 'https://api.nasa.gov/planetary/apod?api_key=' + apiKey;
 
   this.getApodData = function () {
     return $http({
