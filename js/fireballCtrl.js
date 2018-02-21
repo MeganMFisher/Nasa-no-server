@@ -1,57 +1,15 @@
-// angular.module('app').controller('fireballCtrl', function ($scope, mainSvc) {
-// $scope.test = 'its working';
-// $scope.recFireballData = function () {
-//     mainSvc.getFireballData().then(function (response) {
-//         $scope.volcanos = response;
-//     })
-// }
-// $scope.recFireballData();
 
-//     var ctx = document.getElementById('myChart');
-//     var myChart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-//             datasets: [{
-//                 label: 'apples',
-//                 data: [12, 19, 3, 17, 6, 3, 7],
-//                 backgroundColor: "rgba(153,255,51,0.4)"
-//             }, {
-//                 label: 'oranges',
-//                 data: [2, 29, 5, 5, 2, 3, 10],
-//                 backgroundColor: "rgba(255,153,0,0.4)"
-//             }]
-//         }
-//     });
-// })
 
 angular.module('app').controller('fireballCtrl', function ($scope, mainSvc) {
-
-  // var ctx = document.getElementById('myChart');
-  // var myChart = new Chart(ctx, {
-  //   type: 'line',
-  //   data: {
-  //     labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'],
-  //     datasets: [{
-  //       label: 'Energy',
-  //       data: [],
-  //       backgroundColor: "rgba(193,66,66,0.4)"
-  //     }
-  //     , {
-  //       label: 'Velocity',
-  //       data: [],
-  //       backgroundColor: "rgba(245,152,29,0.4)"
-  //     }]
-  //   }
-  // });
 
   recFireballData();
 
   function recFireballData() {
     mainSvc.getFireballData().then(function (response) {
-      var energy = getEnergy(response.data);
-      var velocity = getVelocity(response.data);
-      var dates = getDate(response.data);
+      console.log('hello', response)
+      var energy = getEnergy(response);
+      var velocity = getVelocity(response);
+      var dates = getDate(response);
       var ctx = document.getElementById('myChart');
       var myChart = new Chart(ctx, {
         type: 'line',
@@ -74,8 +32,10 @@ angular.module('app').controller('fireballCtrl', function ($scope, mainSvc) {
 
 
   function getEnergy(fireballsArray) {
+    console.log(fireballsArray)
     return fireballsArray.map(function (fireball) {
-      if(Number(fireball[1] < 50)) return Number(fireball[1])
+      console.log(fireball)
+      if(Number(fireball.calculated_total_impact_energy_kt < 50)) return Number(fireball.calculated_total_impact_energy_kt)
       else return 50;
     })
   }
@@ -83,14 +43,14 @@ angular.module('app').controller('fireballCtrl', function ($scope, mainSvc) {
 
   function getVelocity(fireballsArray) {
     return fireballsArray.map(function (fireball) {
-      if(fireball[8]) return Number(fireball[8])
+      if(fireball.velocity_components_km_s_vz) return Number(fireball.velocity_components_km_s_vz)
       else return 0;
     })
   }
 
   function getDate(fireballsArray) {
     return fireballsArray.map(function (fireball) {
-      if(fireball[0]) return (fireball[0])
+      if(fireball.date_time_peak_brightness_ut) return (fireball.date_time_peak_brightness_ut)
       else return 0;
     })
   }

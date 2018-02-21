@@ -3,7 +3,7 @@
   // this.test1 = 's';
   
 
-    var fireballUrl = 'https://api.nasa.gov/SSD-CNEOS/Fireball?api_key='+ apiKey;
+    var fireballUrl = 'https://data.nasa.gov/resource/2af2-m89m.json';
 
       this.getFireballData = function(){
       return $http({
@@ -15,7 +15,7 @@
       })
     }
 
-    var ApodUrl = 'https://api.nasa.gov/planetary/apod?api_key=' + apiKey;
+    var ApodUrl = 'https://api.nasa.gov/planetary/apod?api_key=' + '0mGbNN5DOFCTs63uL0cI8MQPechnF8x4FR8NY5EO';
 
       this.getApodData = function(){
       return $http({
